@@ -7,6 +7,7 @@ function BowlerList() {
   useEffect(() => {
     const fetchData = async () => {
       const rsp = await fetch("http://localhost:5265/bowlers/marlins-sharks");
+      // fetches the json
 
       const b = await rsp.json();
 
@@ -16,6 +17,7 @@ function BowlerList() {
     fetchData();
   }, []);
 
+  //returns the table with the json info
   return (
     <>
       <div className="row">
